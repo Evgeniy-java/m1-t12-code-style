@@ -1,6 +1,11 @@
 import java.util.Scanner;
 
-class DepositCalculator {
+class DepositCalculator { /* Для преименования класса и файла в котором оон лежит можно
+                              можно использовать ТЫк правой кнопкой на файле в меню проекта и выбрать
+                              Refactoring -> Rename
+                              Не могу разобраться почему в папке src лежит два файла название отдного из которых
+                              не соответвует camelCase 
+                                 */
 
     double calculateComplexPercent(double amount, double yearRate, int depositPeriod) {
         double pay = amount * Math.pow((1 + yearRate / 12), 12 * depositPeriod);
@@ -39,8 +44,8 @@ class DepositCalculator {
         System.out.println("Результат вклада: " + amount + " за " + period + " лет превратятся в " + depositType);
     }
 
-    public static void main(String[] args) {
-        new DepositCalculator().contributionResult();
+    public static void main(String[] args) { new DepositCalculator().contributionResult();
+        //Для удобства мэйн наверное нужен в начале кода
     }
 }
 
